@@ -1,0 +1,21 @@
+<!--pages/life/life.wxml-->
+<view class="gray-container">
+  <view class="point-box">
+    <text class="point-title">你的绿色积分</text>
+    <view class="point-area">
+    <text class="point">{{greenScore}}</text><text>分</text>
+    </view>
+    <text class="point-bottom">自{{startDate}}起，您已经进行垃圾分类{{classifyTimes}}次，投递可回收垃圾{{recoveryTimes}}次，感谢您对环保事业的贡献</text>
+  </view>
+
+  <view class="func-area">
+    <view class="func-row">
+      <view class="func-box" bindtap="gotoAnswer">答题赢积分</view>
+      <view class="func-box" bindtap="tryScanForBag">取垃圾袋</view>
+    </view>
+    <view class="func-row">
+      <view class="func-box" data-url="/pages/recycle/recycleType" bindtap="gotoFunc">投递可回收垃圾</view>
+      <view class="func-box" bindtap="gotoExchange">积分兑换</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,89 @@
+/* pages/updateMobile/updateMobileNo.wxss */
+.page_center {
+  width: 600rpx;
+  margin: 0 auto;
+  margin-top: 200rpx;
+  border-radius: 10rpx;
+  padding-bottom: 60rpx;
+}
+.area_title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60rpx;
+  margin-bottom: 60rpx;
+}
+.text_title {
+  color: #6d493f;
+  font-size: 35rpx;
+  margin-top: 12rpx;
+}
+.image-logo {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.class_row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  color: #797979;
+  font-size: 30rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+.class_row_text {
+  width: 130rpx;
+}
+
+.plholder {
+  font-size: 30rpx;
+  color: #999999;
+}
+.phoneNum_input {
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #000;
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+}
+
+.code_input {
+  width: 188rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  color: #000;
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+}
+.code_button {
+  width: 180rpx;
+  height: 68rpx;
+  line-height: 70rpx;
+  text-align: center;
+  margin-left: 30rpx;
+  border-radius: 16rpx;
+  background-color: rgba(239, 247, 247, 0.15);
+  border: 1px solid #31bfbf;
+  color: #23bfbf;
+  font-size: 26rpx;
+}
+.second_button{
+  width: 180rpx;
+  height: 68rpx;
+  line-height: 70rpx;
+  text-align: center;
+  margin-left: 30rpx;
+  border-radius: 16rpx;
+  background-color:rgba(49, 191, 191, 0.15);
+  border: 1px solid #31BFBF;
+  color: #23BFBF;
+  font-size:26rpx;
+  opacity:0.5;
+}

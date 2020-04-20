@@ -1,0 +1,30 @@
+/* pages/func/score.wxss */
+.main {
+  margin: 50rpx;
+  align-items: center;
+  flex-direction:column;
+  display: flex;
+}
+
+.result_zone {
+  margin: 50rpx;
+}
+
+.comment_zone {
+  margin: 50rpx;
+}
+
+.button_zone {
+  margin: 50rpx;
+  align-items: center;
+  flex-direction:column;
+  text-align: center;
+  display: flex;
+}
+
+.button {
+  margin: 50rpx;
+  display: flex;
+  background-color: #979797;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,37 @@
+<!--pages/func/answer.wxml-->
+<view class='main'>
+  <view class='title_text_zone'>
+    <text class='title_zone'>第{{number}}题</text>
+    <text class='text_zone'>{{text}}</text>
+  </view>
+  <view class='choose_zone'>
+    <block wx:for="{{optionArray}}" wx:for-item="dataItem" wx:key="index" wx:for-index="bindex">
+      <view class='one_choose' data-choose="{{bindex}}" bindtap='choose'>
+        <text class='choose_text'>{{dataItem}}</text>
+      </view>
+
+    </block>
+    
+  </view>
+  <view wx:if='{{number == 1}}' class='one_button_zone'>
+    <view class='one_button' bindtap='next'>
+      <text>下一题</text>
+    </view>
+  </view>
+  <view wx:elif='{{number == 10}}' class='commit_button_zone'>
+    <view class='commit_button' bindtap='last'>
+      <text>上一题</text>
+    </view>
+    <view class='commit_button' bindtap='commit'>
+      <text>提交</text>
+    </view>
+  </view>
+  <view wx:else class='two_button_zone'>
+    <view class='two_button' bindtap='last'>
+      <text>上一题</text>
+    </view>
+    <view class='two_button' bindtap='next'>
+      <text>下一题</text>
+    </view>
+  </view>
+</view>

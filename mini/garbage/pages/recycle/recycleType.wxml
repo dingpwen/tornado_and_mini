@@ -1,0 +1,9 @@
+<!--pages/recycle/recycleType.wxml-->
+<view class="gray-container">
+  <view class="diliver-title">请您选择投递回收物的种类</view>
+  <view class="class-box" data-type="1" bindtap="gotoDeliver">塑料</view>
+  <view class="class-box" data-type="2" bindtap="gotoDeliver">金属</view>
+  <view class="class-box" data-type="3" bindtap="gotoDeliver">纸张</view>
+  <view class="class-box" data-type="4" bindtap="gotoDeliver">纺织品</view>
+  <view class="class-box" data-type="5" bindtap="gotoDeliver">有害垃圾</view>
+</view>

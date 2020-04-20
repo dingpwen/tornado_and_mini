@@ -1,0 +1,17 @@
+<!--pages/connection/connection.wxml-->
+<view class='connection_main'>
+  <view class='searching_devices' wx:if='{{!empty}}'>
+    <scroll-view wx:if='{{devices.length > 0}}' class="device_list" scroll-y scroll-with-animation>
+      <view wx:for="{{devices}}" wx:key="index" data-device-id="{{item.deviceId}}" data-name="{{item.name || item.localName}}" bindtap="createBLEConnection" hover-class="device_item_hover" wx:for-index='index' class="{{index != devices.length - 1?'device_item':'device_item_noborder'}}">
+        <view style="font-size: 16px; color: #333;">{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='empty_view' wx:if='{{empty}}'>
+    <image class='empty_image' src='../../images/bind_top.png'></image>
+    <view class='view_intro'>
+      <text class='text_intro'>未搜索到蓝牙设备</text>
+    </view>
+    <button type="primary" bindtap="startSearch" class='btn_search'>重新搜索</button>
+  </view>
+</view>

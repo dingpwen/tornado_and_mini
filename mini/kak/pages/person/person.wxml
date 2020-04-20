@@ -1,0 +1,154 @@
+<!--pages/person/person.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <!--button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button-->
+    <block wx:if="{{!hasUserInfo && canIUse}}">
+      <image class="userinfo-avatar" src="../../images/cig_default_head.png" background-size="cover"></image>
+      <!--text class="userinfo-nickname" bindtap="getPermission">点击显示微信头像</text-->
+      <button class="button-get" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view style="height:10rpx;background: #F7F7F7;width:100%;"></view>
+  <view class="favor">
+    <block wx:if="{{phoneRegistered.length == 0}}">
+      <view class="phone-item">
+       <text class="phonetitle">登录手机号，享受会员专属优惠及服务</text>
+       <view class="phonebtn">
+         <button class="button2" bindtap="bindphone">登录</button>
+       </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="favor-item" bindtap="goShop">
+        <image class="favor-icon" src="/images/cig_integration.png" background-size="cover"></image>
+        <text class="favor-title">积分</text>
+      </view>
+      <view class="favor-item" bindtap="goShop">
+        <image class="favor-icon" src="/images/cig_coupon.png" background-size="cover"></image>
+        <text class="favor-title">优惠劵</text>
+      </view>
+      <view class="favor-item" bindtap="goShop">
+        <image class="favor-icon" src="/images/cig_mall.png" background-size="cover"></image>
+        <text class="favor-title">商城</text>
+      </view>
+    </block>
+  </view>
+  <!--modal title="绑定手机号" confirm-text="授权并登陆" cancel-text="取消" hidden="{{hidePhoneDlg}}" bindconfirm="phoneConfirm" bindcancel="phoneCancel">
+    <view class="phonedialog">
+      <input class="numinput" bindinput="inputPhone" placeholder="请输入手机号码" placeholder-class="phcolor" type="number" value="{{intialPhoneNumber}}" auto-focus />
+      <view class="codearea">
+        <input class="codeinput" bindinput="inputCode" placeholder="请输入验证码" placeholder-class="phcolor" type="number" value="{{intialCode}}" />
+        <button wx:if="{{codeSended}}" class="codebutton" disable="{{true}}"> 已发送({{seconds}}s)</button>
+        <button wx:else class="codebutton" bindtap="sendCode" disable="{{codeSended}}"> 发送验证码 </button>
+      </view>
+      <checkbox-group class="checkarea" bindchange="checkboxChange">
+        <checkbox checked="{{checked}}"/>
+        <text style="color:#b2b2b2;">已阅读</text><text style="color:#838cb8;">《用户协议与隐私政策》</text>
+      </checkbox-group>
+    </view>
+  </modal-->
+  <mymodal title="绑定手机号" confirm="授权并登陆" bindmyevent="onPhoneRegister" hidden="{{hidePhoneDlg}}">
+    <view class="phonedialog">
+      <input class="numinput" bindinput="inputPhone" placeholder="请输入手机号码" placeholder-class="phcolor" type="number" value="{{intialPhoneNumber}}" auto-focus />
+      <view class="codearea">
+        <input class="codeinput" bindinput="inputCode" placeholder="请输入验证码" placeholder-class="phcolor" type="number" value="{{intialCode}}" />
+        <text wx:if="{{codeSended}}" class="secondbutton" disable="{{true}}">已发送({{seconds}}s)</text>
+        <text wx:else class="codebutton" bindtap="sendCode" disable="{{codeSended}}">发送验证码</text>
+      </view>
+      <checkbox-group class="checkarea" bindchange="checkboxChange">
+        <checkbox checked="{{checked}}"/>
+        <text style="color:#b2b2b2;">已阅读</text><text style="color:#838cb8;" bindtap='checkProtocol'>《用户协议与隐私政策》</text>
+      </checkbox-group>
+    </view>
+  </mymodal>
+  <view style="height:10rpx;background: #F7F7F7;width:100%;"></view>
+  <!--view class="servertitle">
+    <text class="server-title">设备设置</text>
+  </view-->
+  <view class="numcontrol">
+    <view class="control-left">
+    <text class="control-title">每次吸烟口数控制</text>
+    <text class="control-hint">开启后，每次从烟盒中拿出香烟吸14口后，需要放回烟盒，重新取出才能继续吸烟。</text>
+    </view>
+    <view class="control-switch">
+      <!--switch checked="{{numChecked}}"bindchange="numCtrlChange"/-->
+      <image wx:if="{{numChecked}}" class="switch_img"  src="../../images/switch_on.png" background-size="cover" bindtap="numCtrlChange"/>
+      <image wx:else class="switch_img" src="../../images/switch_off.png" background-size="cover" bindtap="numCtrlChange"/>
+    </view>
+  </view>
+  <view class="devcontrol" bindtap="setConcentration">
+    <view class="control-left">
+    <text class="control-title">浓度调节</text>
+    <text class="control-hint">调节电子烟浓度</text>
+    </view>
+    <view class="control-right">
+      <text class="control-result" wx:if="{{concentration === 'normal'}}">正常</text>
+      <text class="control-result" wx:else>大浓度</text>
+      <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+    </view>
+  </view>
+  <view class="devcontrol" bindtap="unTyping">
+    <view class="control-left">
+      <text class="control-title">解绑设备</text>
+      <text class="control-hint">解绑与当前设备绑定</text>
+    </view>
+    <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+  </view>
+  <!--modal title="浓度调节" confirm-text="确认" confirmColor="#31BFBF" cancel-text="取消" hidden="{{hideConDlg}}" bindconfirm="modalConfirm" bindcancel="modalCancel">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <block wx:for-items="{{items}}" wx:key="name" >
+        <view class="radio-item">
+          <text class="radio-title"> {{item.value}}</text>
+          <radio class="radio" value="{{item.name}}" checked="{{item.checked}}"/>
+        </view>
+      </block>
+    </radio-group>
+  </modal-->
+  <mymodal title="浓度调节" confirm="确认" bindmyevent="onConChecked" hidden="{{hideConDlg}}">
+    <view>
+      <view class="radio-item" data-value="{{items[0].name}}" bindtap="radioChange">
+        <text class="radio-title"> {{items[0].value}}</text>
+        <!--radio class="radio" value="{{items[0].name}}" checked="{{items[0].checked}}"/-->
+        <image wx:if="{{items[0].checked}}" class="radio_img" src="../../images/radio_on.png" background-size="cover"></image>
+        <image wx:else class="radio_img" src="../../images/radio_off.png" background-size="cover"></image>
+      </view>
+      <view class="radio-item2" data-value="{{items[1].name}}" bindtap="radioChange">
+        <text class="radio-title"> {{items[1].value}}</text>
+        <image wx:if="{{items[1].checked}}" class="radio_img"  src="../../images/radio_on.png" background-size="cover"></image>
+        <image wx:else class="radio_img" src="../../images/radio_off.png" background-size="cover"></image>
+      </view>
+    </view>
+  </mymodal>
+
+  <view class="devcontrol" data-url="/pages/ota/ota" bindtap="gotoServer">
+    <view class="control-left">
+      <text class="control-title">OTA升级</text>
+      <text class="control-hint">对烟盒设备进行OTA升级</text>
+    </view>
+    <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+  </view>
+
+  <view style="height:10rpx;background: #F7F7F7;width:100%;"></view>
+
+  <!--view class="servertitle">
+    <text class="server-title">会员服务</text>
+  </view-->
+  <!--view class="server-item" data-url="/pages/notification/notification" bindtap="gotoServer">
+    <text>通知消息</text>
+    <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+  </view-->
+  <view class="server-item" data-url="/pages/information/information" bindtap="gotoServer">
+    <!--navigator url="/pages/information/information" hover-class="navigator-hover">使用说明</navigator-->
+    <text>使用说明</text>
+    <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+  </view>
+  <view class="server-item" data-url="/pages/feedback/feedback" bindtap="gotoServer">
+    <!--navigator url="/pages/feedback/feedback" hover-class="navigator-hover">意见反馈</navigator-->
+    <text>意见反馈</text>
+    <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+  </view>
+</view>

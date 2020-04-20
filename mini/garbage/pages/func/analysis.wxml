@@ -1,0 +1,14 @@
+<!--pages/func/analysis.wxml-->
+<view class='main'>
+  <block wx:for="{{dataList}}" wx:for-item="dataItem" wx:key="text" wx:for-index="bindex">
+    <view class='item'>
+      <text>第{{bindex+1}}题{{dataItem.text}}</text>
+      <block wx:for="{{dataItem.chooseItem}}" wx:for-item="chooseItem" wx:key="text" >
+        <view>
+          <text class='choose_zone'>{{chooseItem}}</text>
+        </view>
+      </block>
+      <text>{{dataItem.comment}}</text>
+    </view>
+  </block>
+</view>

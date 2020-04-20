@@ -1,0 +1,39 @@
+<!--pages/resident/residentsList.wxml-->
+<view class="container">
+  <view class="confirm-top">
+    <text>已绑定成员</text>
+    <text style="color:blue;" bindtap="addResident">添加新成员</text>
+  </view>
+  <view class="table">
+    <view class="tr">
+        <view class="th" style="width:180rpx;">姓名</view>
+        <view class="th" style="width:180rpx;">手机号码</view>
+        <view class="th" style="width:120rpx;">身份</view>
+        <view class="th" style="width:120rpx;">管理</view>
+    </view>
+    <view class="tr" wx:for="{{bindList}}" wx:for-index="idx" wx:key="userId">
+        <view class="td" style="width:180rpx;">{{item.name}}</view>
+        <view class="td" style="width:180rpx;">{{item.mobileNo}}</view>
+        <view class="td" style="width:120rpx;">{{item.identity}}</view>
+        <view class="td" style="width:120rpx;color:blue;" data-id="{{item.userId}}" bindtap="removeResident">删除</view>
+    </view>
+  </view>
+  <view class="confirm-top" wx:if="{{applyLen != 0}}">
+    <text>待审核成员</text>
+  </view>
+  <view class="table" wx:if="{{applyLen != 0}}">
+    <view class="tr">
+        <view class="th" style="width:180rpx;">姓名</view>
+        <view class="th" style="width:180rpx;">手机号码</view>
+        <view class="th" style="width:120rpx;">身份</view>
+        <view class="th" style="width:120rpx;">管理</view>
+    </view>
+    <view class="tr" wx:for="{{applyList}}" wx:for-index="idx" wx:key="userId">
+        <view class="td" style="width:180rpx;">{{item.name}}</view>
+        <view class="td" style="width:180rpx;">{{item.mobileNo}}</view>
+        <view class="td" style="width:120rpx;">{{item.identity}}</view>
+        <view class="td" style="width:120rpx;color:blue;" data-id="{{item.userId}}" bindtap="confirmResident">通过</view>
+    </view>
+  </view>
+
+</view>

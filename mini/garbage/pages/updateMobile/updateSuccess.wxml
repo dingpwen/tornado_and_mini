@@ -1,0 +1,9 @@
+<!--pages/updateMobile/updateSuccess.wxml-->
+<view class="center">
+  <icon type='success' size='64' color='#31BFBF'></icon>
+  <view class='area-title'>
+    <text class= "text-title">手机号码修改完成</text>
+  </view>
+  <text class="text-tips">您的手机号码修改成功，为确保账号安全，您需要使用新号码重新登录，登录成功后，旧号码失效，旧号码产生积分信息会同步到新号码。</text>
+  <button class='btn-submit' bindtap="confirm" >确认</button>
+</view>

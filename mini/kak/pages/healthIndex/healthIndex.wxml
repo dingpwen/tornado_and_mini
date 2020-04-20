@@ -1,0 +1,38 @@
+<!--pages/healthIndex/healthIndex.wxml-->
+<view class='main'>
+  <image class='image_view' src='../../images/cig_health_exp.png'></image>
+  <view class='main_start'>
+    <view class='top_area'>
+      <text class='main_bindday_padding'>自{{fromYear}}年{{fromMonth}}月{{fromDay}}日起</text>
+      <text class='main_losssmoke_padding'>少抽真烟</text>
+      <text class='main_text' wx:if='{{lossSmoke < 20}}'>
+        <text class='main_text_string'>约</text>
+        <text class='main_text_number'>{{lossSmoke}}</text>
+        <text class='main_text_string'>支</text>
+      </text>
+      <text class='main_text' wx:if='{{lossSmoke >= 20}}'>
+        <text class='main_text_string'>约</text>
+        <text class='main_text_number'>{{lossSmokes}}</text>
+        <text class='main_text_string'>包</text>
+      </text>
+    </view>
+    <view class='bottom_area'>
+      <view class='bottom_left_area'>
+        <text class='main_losstarco_padding'>少摄入焦油</text>
+        <text class='main_text'>
+          <text class='main_text_string'>约</text>
+          <text class='main_text_number'>{{lossTar}}</text>
+          <text class='main_text_string'>mg</text>
+        </text>
+      </view>
+      <view class='bottom_right_area'>
+        <text class='main_losstarco_padding'>少摄入一氧化碳</text>
+        <text class='main_text'>
+          <text class='main_text_string'>约</text>
+          <text class='main_text_number'>{{lossCO}}</text>
+          <text class='main_text_string'>mg</text>
+        </text>
+      </view>
+    </view>
+  </view>
+</view>

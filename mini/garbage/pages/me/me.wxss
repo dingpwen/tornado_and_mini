@@ -1,0 +1,86 @@
+/* pages/me/me.wxss */
+.userarea{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+}
+.user-edit{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 48rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  color:#0000ff;
+  font-size:25rpx;
+}
+.userinfo{
+  width: 750rpx;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size:25rpx;
+}
+.avtarpart{
+  margin-left: 120rpx;
+}
+.infopart{
+  display: flex;
+  flex-direction: column;
+  margin-left: 60rpx;
+}
+.userinfo-avatar{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.listtitle{
+  width: 750rpx;
+  display: flex;
+  font-size:22rpx;
+  flex-direction: row;
+  justify-content: flex-start;
+  color:#919191;
+  padding-left: 48rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+.listitem{
+  width: 702rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 48rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.list-left{
+  display: flex;
+  flex-direction: column;
+  margin-right: 48rpx;
+}
+.list-title{
+  font-size:25rpx;
+}
+
+.list-hint{
+  font-size:22rpx;
+  color:#919191;
+}
+
+.rgiht-arrow{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 48rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center
+}

@@ -1,0 +1,10 @@
+/* pages/func/analysis.wxss */
+.main {
+  width: 100%;
+}
+
+.item {
+  height: 200rpx;
+  width: 80%;
+  margin: auto;
+}

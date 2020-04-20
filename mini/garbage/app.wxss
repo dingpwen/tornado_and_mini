@@ -1,0 +1,50 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.gray-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #f7f7f7;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.divide-line-h-full {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #F8F8F8;
+}
+.divide-line-h-2 { /* 二级分割线 */
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #F8F8F8;
+  margin-left: 48rpx;
+}
+
+.btn-submit {
+  margin-top: 50rpx;
+  width: 500rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 20rpx;
+  background: #31BFBF;
+  color: white;
+  font-size: 30rpx;
+}
+.text-first {
+  font-size: 32rpx;
+  color: #000000;
+}
+.text-second {
+  font-size: 30rpx;
+  color: #333333;
+}

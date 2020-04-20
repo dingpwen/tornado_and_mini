@@ -1,0 +1,23 @@
+<!--pages/information/information.wxml-->
+<view class="container">
+  <view>
+    <swiper class="swiper_box" circular="{{true}}" bindchange="swiperchange">
+      <swiper-item wx:for="{{banners}}" wx:key="id">
+        <view class='swiper-inner'>
+          <view class='swiper-top'>
+            <view class="swiper-image">
+              <image src="{{item.picUrl}}"/>
+            </view>
+          </view>
+          <text>{{item.info}}</text>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view class="dots">  
+      <view wx:for="{{banners}}" wx:key="id" class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>  
+    </view>  
+  </view>
+  <view class="{{showButton?'header_view_show':'header_view_hide'}}">
+    <text class='button_text' bindtap='bindtap'>进入小程序</text>
+  </view>
+</view>

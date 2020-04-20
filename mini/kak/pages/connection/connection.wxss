@@ -1,0 +1,39 @@
+/* pages/connection/connection.wxss */
+
+.empty_image {
+  width: 600rpx;
+  height: 370rpx;
+  margin: 0 auto;
+  margin-left: 75rpx;
+}
+
+.view_intro {
+  font-size: 25rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.btn_search {
+  height: 94rpx;
+  width: 670rpx;
+  margin: 0 auto;
+}
+
+.device_item {
+  height: 120rpx;
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  line-height: 120rpx;
+}
+
+.device_item_noborder {
+  height: 120rpx;
+  margin-left: 30rpx;
+  line-height: 120rpx;
+}
+
+.device_list {
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+}

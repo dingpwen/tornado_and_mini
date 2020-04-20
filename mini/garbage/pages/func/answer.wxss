@@ -1,0 +1,81 @@
+/* pages/func/answer.wxss */
+.main {
+  margin: 50rpx;
+}
+
+.title_text_zone {
+  margin: 50rpx;
+  align-items: center;
+  flex-direction:column;
+  display: flex;
+}
+
+.title_zone {
+  margin-top: 50rpx;
+}
+
+.text_zone {
+  margin-top: 50rpx;
+}
+
+.choose_zone {
+  margin: auto 50rpx;
+  flex-direction:column;
+  display: flex;
+}
+
+.one_choose {
+  margin: 50rpx;
+  background-color: #979797;
+  display: flex;
+  border-radius: 100rpx;
+}
+
+.choose_text {
+  margin-left: 10rpx;
+}
+
+.one_button_zone {
+  margin: auto;
+  align-items: center;
+  flex-direction:column;
+  text-align: center;
+  display: flex;
+}
+
+.one_button {
+  margin: auto;
+  width: 40%;
+  background-color: #979797;
+  border-radius: 10rpx;
+}
+
+.two_button_zone {
+  margin: 50rpx;
+  align-items: center;
+  flex-direction:row;
+  text-align: center;
+  display: flex;
+}
+
+.two_button {
+  margin: auto;
+  width: 40%;
+  background-color: #979797;
+  border-radius: 10rpx;
+}
+
+.commit_button_zone {
+  margin: 50rpx;
+  align-items: center;
+  flex-direction:column;
+  text-align: center;
+  display: flex;
+}
+
+.commit_button {
+  margin: 20rpx auto;
+  width: 40%;
+  background-color: #979797;
+  border-radius: 10rpx;
+}

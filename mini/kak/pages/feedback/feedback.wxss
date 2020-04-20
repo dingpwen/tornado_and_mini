@@ -1,0 +1,43 @@
+/* pages/feedback/feedback.wxss */
+.feedsection {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 56rpx;
+}
+
+.feadarea{
+  height: 482rpx;
+  background-color:rgba(49, 191, 191, 0.1);
+  font-size:28rpx;
+  padding-left:28rpx;
+  padding-right:28rpx;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+  border-radius: 16rpx;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+}
+
+.feedbtn{
+  bottom: 120rpx;
+  position: fixed;
+}
+
+.phcolor{
+  color:#999999
+}
+
+button::after{ 
+	border: none; 
+}
+
+button {
+  width:408rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  background: #31BFBF;
+  color: white;
+}

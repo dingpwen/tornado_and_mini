@@ -1,0 +1,92 @@
+/* pages/user/checkHouseholder.wxss */
+.title{
+  width:80%;
+  font-size:26rpx;
+  margin-top: 120rpx;
+  margin-bottom: 60rpx;
+}
+
+.inputarea{
+  width:80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size:26rpx;
+  margin-bottom: 20rpx;
+}
+
+.inputtitle{
+  width:120rpx;
+}
+.numinput{
+  width:480rpx;
+  height: 80rpx;
+  font-size:26rpx;
+  color:#000;
+  background-color:rgba(49, 191, 191, 0.1);
+  padding-left:20rpx;
+  border-radius: 16rpx;
+}
+.codeinput{
+  width: 260rpx;
+  height: 80rpx;
+  font-size:26rpx;
+  color:#000;
+  background-color:rgba(49, 191, 191, 0.1);
+  padding-left:28rpx;
+  padding-right:28rpx;
+  border-radius: 16rpx;
+}
+.codebutton{
+  width: 200rpx;
+  height: 78rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  border-radius: 16rpx;
+  background-color:rgba(49, 191, 191, 0.15);
+  border: 1px solid #31BFBF;
+  color: #23BFBF;
+  font-size:28rpx;
+}
+.secondbutton{
+  width: 200rpx;
+  height: 78rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  border-radius: 16rpx;
+  background-color:rgba(49, 191, 191, 0.15);
+  border: 1px solid #31BFBF;
+  color: #23BFBF;
+  font-size:28rpx;
+  opacity:0.5;
+}
+
+.buttons{
+  width:90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40rpx;
+  font-size:25rpx;
+}
+
+.phcolor{
+  color:#999999
+}
+
+button::after{ 
+	border: none; 
+}
+
+button {
+  width:248rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  background: #31BFBF;
+  color: white;
+  font-size:25rpx;
+}

@@ -1,0 +1,24 @@
+<!--pages/forgetPwd/resetPwd.wxml-->
+<view class="container">
+  <view class='page_center'>
+    <view class='area_title'>
+      <image class="image-logo" src="../../images/cig_default_head.png" mode="cover"></image>
+      <text class= "text_title">设置密码</text>
+    </view>
+
+    <view class='class_row'>
+      <text class='class_row_text' decode='true'>新密码</text>
+      <input class='pwd_input' placeholder='请输入密码' maxlength='18' value="{{inputPwd}}" bindblur='checkPwd' bindinput='onInputPwd' placeholder-class='plholder' password='{{pwdInputType}}'></input>
+      <image src="{{pwdInputType ?'../../images/icon_eye_off.png':'../../images/icon_eye_on.png'}}" class='image_pwd_switch' bindtap='showPwd' data-type='{{pwdInputType}}'></image>
+    </view>
+
+    <view class='class_row'>
+      <text class='class_row_text' decode='true'>确认密码</text>
+      <input class='pwd_input' placeholder='请再次输入密码' maxlength='18' value="{{confirmPwd}}" bindinput='onInputPwd2' placeholder-class='plholder' password='{{confirmPwdInputType}}'></input>
+      <image src="{{confirmPwdInputType ?'../../images/icon_eye_off.png':'../../images/icon_eye_on.png'}}" class='image_pwd_switch' bindtap='showConfirmPwd' data-type='{{confirmPwdInputType}}'></image>
+    </view>
+
+    <button class='btn-submit' bindtap="resetPwd">确认</button>
+  </view>
+</view>
+

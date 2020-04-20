@@ -1,0 +1,153 @@
+/* pages/dataanalysis/dataanalysis.wxss */
+
+.analysis_main {
+  flex-direction: column;
+  display: flex;
+  align-items:center;
+}
+
+.tab_title_box {
+  width: 480rpx;
+  height: 60rpx;
+  margin: 22 auto 0 auto;
+  display: flex;
+  border-radius: 100rpx;
+  background-color: rgb(49, 191, 191, 0.1);
+}
+
+.tab_title_default {
+  width: 160rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 100rpx;
+}
+
+.tab_title_select {
+  width: 160rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 100rpx;
+  background-color:rgb(49, 191, 191);
+}
+
+
+.tab_title_text_default {
+  width: 200rpx;
+  text-align: center;
+  color: #939393;
+  font-size: 25rpx;
+}
+
+.tab_title_text_select {
+  width: 200rpx;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 25rpx;
+}
+
+.tab_content_box {
+  width: 100%;
+  height: 702rpx;
+}
+
+.switch_title {
+  display: flex;
+  margin-top: 32rpx;
+  margin-left: 120rpx;
+  margin-bottom: 32rpx;
+  width: 510rpx;
+}
+
+.arrowheadleft {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.arrowheadright {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.title_text {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content:center;
+  color: #239F9F;
+  font-size: 24rpx;
+  width: 414rpx;
+}
+
+.canvas_view {
+  width: 680rpx;
+  height: 590rpx;
+  margin:0 auto;
+}
+
+.canvas {
+  width: 680rpx;
+  height: 590rpx;
+}
+
+.data_statistics {
+  flex-direction: row;
+  display: flex;
+  justify-content:center;
+  position: absolute;
+  bottom: 126rpx;
+  width: 100%;
+}
+
+.data_statistics_zone {
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 50%;
+}
+
+.data_text_string {
+  font-size: 24rpx;
+  color: #000000;
+}
+
+.data_text_number {
+  font-size: 42rpx;
+  color: #239F9F;
+}
+
+.cover_view {
+  height: 20%;
+  width: 50%;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+}
+
+.loading_view {
+  padding-top:500rpx;
+}
+
+.modal_nodata {
+  flex-direction: column;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  width: 100%;
+}
+
+.modal_nodata_image {
+  display: flex;
+  height: 256rpx;
+  width: 256rpx;
+  margin-top: 20rpx;
+}
+
+.modal_nodata_text {
+  width: 484rpx;
+  color: #888888;
+  margin-top: 16rpx;
+  margin-bottom: 24rpx;
+  font-size: 30rpx;
+}

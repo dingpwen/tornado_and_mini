@@ -1,0 +1,79 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+  <view class="userarea">
+    <!--navigator url="/pages/user/edituser" class="user-edit">编辑</navigator-->
+    <view class="user-edit" bindtap="gotoEdit">编辑</view>
+    <view class="userinfo">
+      <view class="avtarpart">
+        <image wx:if="{{!hasWeUserInfo}}" class="userinfo-avatar" src="../../images/cig_default_head.png" background-size="cover"></image>
+        <image wx:else class="userinfo-avatar" src="{{weUserInfo.avatarUrl}}" background-size="cover"></image>
+      </view>
+      <view class="infopart">
+        <text wx:if="{{!hasWeUserInfo}}">微信昵称未知</text>
+        <text wx:else>{{weUserInfo.nickName}}</text>
+        <block wx:if="{{!hasUserInfo}}">
+          <text>手机号码未知</text>
+          <text>详细地址未知</text>
+        </block>
+        <block wx:else>
+          <text >{{userInfo.mobileNo}}</text>
+          <text wx:if="{{address}}">{{address}}</text>
+          <text wx:else>地址未知</text>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{identity == 1}}" style="height:10rpx;background: #F7F7F7;width:100%;"></view>
+  <view wx:if="{{identity == 1}}" class="listtitle">
+    <text>居住信息管理</text>
+  </view>
+  <view wx:if="{{identity == 1}}" class="listitem" data-type="1" bindtap="gotoResident">
+    <view class="list-left">
+      <text class="list-title">居住人员管理</text>
+      <text class="list-hint">当前居住人数{{residents}}人</text>
+    </view>
+    <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+  </view>
+  <view style="height:10rpx;background: #F7F7F7;width:100%;"></view>
+  <view class="listtitle">
+    <text>我的绿色生活</text>
+  </view>
+  <view class="listitem" data-type="1" bindtap="gotoRecord">
+    <view class="list-left">
+      <text class="list-title">积分记录查询</text>
+      <text class="list-hint">总积分{{greenScore}}</text>
+    </view>
+    <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+  </view>
+  <view class="listitem" data-type="2" bindtap="gotoRecord">
+    <view class="list-left">
+      <text class="list-title">取垃圾袋记录</text>
+      <text class="list-hint">自{{startDate}}起，您已领取{{getBagCount}}卷垃圾袋</text>
+    </view>
+    <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+  </view>
+  <view class="listitem" data-type="3"  bindtap="gotoRecord">
+    <view class="list-left">
+      <text class="list-title">可回收垃圾投递记录</text>
+      <text class="list-hint">自{{startDate}}起，您已投递可回收垃圾{{recoveryTimes}}次</text>
+    </view>
+    <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+  </view>
+
+  <view wx:if="{{identity == 1}}" style="height:10rpx;background: #F7F7F7;width:100%;"></view>
+  <view wx:if="{{identity == 1}}" class="listtitle">
+    <text>安全设置</text>
+  </view>
+  <view class="listitem" data-url="/pages/updateMobile/checkPwd"  bindtap="gotoSecureSetting">
+    <view class="list-left">
+      <text class="list-title">修改手机号码</text>
+    </view>
+    <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+  </view>
+  <view class="listitem" data-url="/pages/updatePwd/updatePwd"  bindtap="gotoSecureSetting">
+    <view class="list-left">
+      <text class="list-title">修改登录密码</text>
+    </view>
+    <image class="rgiht-arrow" src="../../images/cig_more_right.png" background-size="cover"></image>
+  </view>
+</view>

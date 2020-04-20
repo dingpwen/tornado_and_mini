@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/register/registerResult",
+    "pages/forgetPwd/forgetPwd",
+    "pages/forgetPwd/resetPwd",
+    "pages/logs/logs",
+    "pages/me/me",
+    "pages/life/life",
+    "pages/recycle/recycleType",
+    "pages/recycle/recycleQrcode",
+    "pages/recycle/recycleResult",
+    "pages/exchange/exchangeQrcode",
+    "pages/exchange/exchangeResult",
+    "pages/record/records",
+    "pages/user/edituser",
+    "pages/user/checkHouseholder",
+    "pages/func/answer",
+    "pages/func/score",
+    "pages/func/analysis",
+    "pages/resident/residentsList",
+    "pages/resident/addResident",
+    "pages/updateMobile/checkPwd",
+    "pages/updateMobile/updateMobileNo",
+    "pages/updateMobile/updateSuccess",
+    "pages/updatePwd/updatePwd",
+    "pages/updatePwd/updatePwdResult"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "分类宝",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#31BFBF",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/life/life",
+        "iconPath": "images/nav/cig_health_index_normal.png",
+        "selectedIconPath": "images/nav/cig_health_index_focus.png",
+        "text": "绿色生活"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "images/nav/cig_personal_normal.png",
+        "selectedIconPath": "images/nav/cig_personal_focus.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

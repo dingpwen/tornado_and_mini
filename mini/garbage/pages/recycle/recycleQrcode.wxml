@@ -1,0 +1,9 @@
+<!--pages/recycle/recycleQrcode.wxml-->
+<view class="gray-container">
+  <view class="code-title">请将二维码对准智能回收箱扫码</view>
+  <!--image class="code-img" src="{{qrcodePath}}" background-size="cover" bindtap="doExit"></image-->
+  <view class="canvas-box">
+    <canvas hidden="{{canvasHidden}}" style="width: {{imageSize}}rpx;height: {{imageSize}}rpx;" canvas-id="myCanvas"/>
+  </view>
+
+</view>

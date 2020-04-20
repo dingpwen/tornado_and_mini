@@ -1,0 +1,8 @@
+<!--pages/exchange/exchange.wxml-->
+<view class="gray-container">
+  <view class="code-title">您当前可用积分为{{greenScore}}分，请在兑换机上选择需要兑换的商品，然后将二维码对准兑换机扫描。</view>
+  <!--image class="code-img" src="../../images/qrcode.jpg" background-size="cover" bindtap="doExit"></image-->
+  <view class="canvas-box">
+    <canvas hidden="{{canvasHidden}}" style="width: {{imageSize}}rpx;height: {{imageSize}}rpx;" canvas-id="myCanvas"/>
+  </view>
+</view>

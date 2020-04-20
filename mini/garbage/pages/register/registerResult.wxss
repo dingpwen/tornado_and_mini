@@ -1,0 +1,25 @@
+/* pages/registerResult/registerResult.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 120rpx;
+}
+
+.image-logo {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.text_tips {
+  font-size: 28rpx;
+  line-height:50rpx;
+  text-overflow: ellipsis;
+  color: #333333;
+  margin: 40rpx;
+}

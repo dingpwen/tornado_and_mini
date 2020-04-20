@@ -1,0 +1,76 @@
+<!--pages/dataanalysis/dataanalysis.wxml-->
+<view class='analysis_main'>
+  <view class='tab_title_box'>
+    <view class='{{tab_title0}}' bindtap='swichNav' data-current="0">
+      <text class='{{tab_title_text0}}'>今日</text>
+    </view>
+    <view class='{{tab_title1}}' bindtap='swichNav' data-current="1">
+      <text class='{{tab_title_text1}}'>近一周</text>
+    </view>
+    <view class='{{tab_title2}}' bindtap='swichNav' data-current="2">
+      <text class='{{tab_title_text2}}'>近一月</text>
+    </view>
+  </view>
+
+  <mymodal hidden="{{networkerror || !canbeshow || !nodata || syncdata}}" title="未获取到数据" confirm="确认" confirm-color="red" bindmyevent="confirm" nocancel="true">
+    <view class='modal_nodata'>
+      <image class='modal_nodata_image' mode='aspectFit' src='../../images/cig_bluetooth.png'></image>
+      <text class='modal_nodata_text'>未统计到今日吸烟数据，请将烟杆插回烟盒，并打开手机蓝牙进行数据同步。</text>
+    </view>
+  </mymodal>
+
+  <loading hidden="{{!syncdata}}">
+        数据同步中...
+  </loading>
+  
+  <swiper bindchange='bindChange' class='tab_content_box' duration='300' current='{{currentTab}}'>
+    <swiper-item catchtouchmove="false">
+      <view class='switch_title'>
+        <image mode='center' class='arrowheadleft' bindtap="yesterday" src="{{leftimg}}"></image>
+        <text class='title_text'>{{yearstart}}年{{monthstart}}月{{daystart}}日</text>
+        <image mode='center' class='arrowheadright' bindtap="tomorrow" src="{{rightimg}}"></image>
+      </view>
+      <view class='canvas_view'>
+        <canvas hidden="{{(!networkerror && canbeshow && nodata) || syncdata}}" class='canvas' canvas-id="lineCanvasDay"></canvas>
+      </view>
+    </swiper-item>
+    <swiper-item catchtouchmove="false">
+      <view class='switch_title'>
+        <image mode='center' class='arrowheadleft' bindtap="lastWeek"  src="{{leftimg}}"></image>
+        <text class='title_text'>{{yearstart}}年{{monthstart}}月{{daystart}}日~{{yearend}}年{{monthend}}月{{dayend}}日</text>
+        <image mode='center' class='arrowheadright' bindtap="nextWeek" src="{{rightimg}}"></image>
+      </view>
+      <view class='canvas_view'>
+        <canvas hidden="{{(!networkerror && canbeshow && nodata) || syncdata}}" class='canvas' canvas-id="lineCanvasWeek"></canvas>
+      </view>
+    </swiper-item>
+    <swiper-item catchtouchmove="false">
+      <view class='switch_title'>
+        <image mode='center' class='arrowheadleft' bindtap="lastMonth" src="{{leftimg}}"></image>
+        <text class='title_text' wx:if='{{onemonth}}'>{{yearend}}年{{monthend}}月</text>
+        <text class='title_text' wx:else>{{yearstart}}年{{monthstart}}月~{{yearend}}年{{monthend}}月</text>
+        <image mode='center' class='arrowheadright' bindtap="nextMonth" src="{{rightimg}}"></image>
+      </view>
+      <view class='canvas_view'>
+        <canvas hidden="{{(!networkerror && canbeshow && nodata) || syncdata}}" class='canvas' canvas-id="lineCanvasMonth"></canvas>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <view class='data_statistics'>
+    <view class='data_statistics_zone'>
+      <text class='data_text_string' wx:if="{{showday}}">当前总数（口）</text>
+      <text class='data_text_string' wx:if="{{showweek}}">一周总数（口）</text>
+      <text class='data_text_string' wx:if="{{showmonth}}">一月总数（口）</text>
+      <text class='data_text_number' >{{smokeSum}}</text>
+    </view>
+    <view class='data_statistics_zone' wx:if='{{branch < 20}}'>
+        <text class='data_text_string' >相当于普通烟（根）</text>
+        <text class='data_text_number' >{{branch}}</text>
+    </view>
+    <view class='data_statistics_zone' wx:else>
+        <text class='data_text_string' >相当于普通烟（包）</text>
+        <text class='data_text_number' >{{packet}}</text>
+    </view>
+  </view>
+</view>

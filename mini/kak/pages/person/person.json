@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "会员主页",
+  "usingComponents": {
+    "mymodal":"/components/modal/modal"
+  }
+}

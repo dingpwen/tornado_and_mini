@@ -1,0 +1,32 @@
+/* pages/resident/residentsList.wxss */
+.confirm-top{
+  width: 600rpx;
+  margin-top: 60rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size:22rpx;
+}
+
+.table{
+  margin-top: 10rpx;
+  border:1px solid #f7f7f7;
+  border-right:0;
+  border-bottom: 0;
+  width: 600rpx;
+  font-size:25rpx;
+}
+
+.tr{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.th,.td{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f7f7f7;
+  border-right: 1px solid #f7f7f7;
+  text-align: center;
+}

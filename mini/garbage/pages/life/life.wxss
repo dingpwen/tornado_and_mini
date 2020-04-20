@@ -1,0 +1,59 @@
+/* pages/life/life.wxss */
+.point-box{
+  width: 92%;
+  display: flex;
+  background-color: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60rpx;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  font-size: 25rpx;
+}
+
+.point-title{
+  font-weight: bold;
+}
+.point-area{
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+.point{
+  font-size: 80rpx;
+  font-weight: bold;
+  color:#1dc04e;
+}
+.point-bottom{
+  width: 85%;
+}
+
+.func-area{
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60rpx;
+  font-size: 25rpx;
+}
+
+.func-row{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25rpx;
+  margin-bottom: 60rpx;
+}
+
+.func-box{
+  width: 45%;
+  height:200rpx;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+}

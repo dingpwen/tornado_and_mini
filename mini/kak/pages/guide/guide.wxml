@@ -1,0 +1,22 @@
+<view class='main_view' >
+  <image class = 'image_center' src='../../images/guide.png'></image>
+  <view class='swiper_center'>
+    <swiper class="swiper-item" 
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}"
+      interval="{{interval}}"
+      duration="{{duration}}"
+      bindchange="bindchange"
+    >
+      <block wx:for="{{text}}" wx:key="{{index}}">
+        <swiper-item >
+            <view style='word-wrap:break-word'>{{item.text}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+</view>
+<view class="{{showButton?'header_view_show':'header_view_hide'}}">
+    <button bindtap='bindtap'>进入小程序</button>
+</view>

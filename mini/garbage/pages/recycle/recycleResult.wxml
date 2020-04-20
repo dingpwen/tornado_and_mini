@@ -1,0 +1,9 @@
+<!--pages/recycle/recycleResult.wxml-->
+<view class="container">
+  <image class="icon-part" src="../../images/ok.png" background-size="cover"></image>
+  <view class="text-part">投递成功</view>
+  <view class="deliver-part">您本次投递{{categoryName}}回收物{{weight}}公斤，共获得积分{{score}}分，感谢您对垃圾分类的支持，让我们共同创造绿色生活。</view>
+
+  <button bindtap="viewRecord">查看投递记录</button>
+  <button bindtap="doExit">退出投递</button>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/exchange/result.wxml-->
+<view class="container">
+  <image class="icon-part" src="../../images/ok.png" background-size="cover"></image>
+  <view class="text-part">兑换成功</view>
+  <button bindtap="viewRecord">查看兑换记录</button>
+</view>

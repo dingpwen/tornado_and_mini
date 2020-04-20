@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <image class="userinfo-avatar" src="../../images/cig_default_head.png" background-size="cover"></image>
+      <!--text class="userinfo-nickname" bindtap="getPermission">点击显示微信头像</text-->
+      <button class="button-get" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信授权登录 </button>
+    </block>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>

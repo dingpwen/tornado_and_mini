@@ -1,0 +1,38 @@
+/* pages/guide/guide.wxss */
+.main_view {
+  height: 800rpx;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+}
+.image_center {
+  width: 80%;
+  height: 300rpx;
+  display: flex;
+  
+}
+.swiper_center {
+  display: flex;
+  flex-direction: column;
+  height: 500rpx;
+  width: 80%;
+}
+
+.swiper-item{
+  display: flex;
+  height: 400rpx;
+}
+
+.button{
+  position:fixed;
+  bottom: 0rpx;
+  left: 50%;
+}
+
+.header_view_hide{
+  display: none;
+}
+
+.header_view_show{
+  display: block;
+}

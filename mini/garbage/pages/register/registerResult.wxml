@@ -1,0 +1,12 @@
+<!--pages/registerResult/registerResult.wxml-->
+<view class="container">
+
+  <image class="image-logo" src="../../images/cig_default_head.png" mode="cover"></image>
+  <text class ="text_first">注册成功</text>
+  
+  <text class="text_tips" decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您已经成为我们尊贵的会员，垃圾袋领取、可回收垃圾投递、积分累积、兑换等均需要绑定居住信息，建议您尽快完善居住信息。您也可以后期进行完善。\n</text>
+
+  <button class="btn-submit" bindtap="toUpdateUserInfo">完善个人信息</button>
+  <button class="btn-submit" bindtap="goMainPage">先逛逛</button>
+
+</view>

@@ -1,0 +1,11 @@
+/* pages/deliver/recycleQrcode.wxss */
+.code-title{
+  font-size: 30rpx;
+  margin-top: 120rpx;
+  margin-bottom: 80rpx;
+}
+
+.code-img{
+  width: 280rpx;
+  height: 280rpx;
+}

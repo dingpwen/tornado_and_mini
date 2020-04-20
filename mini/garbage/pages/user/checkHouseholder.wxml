@@ -1,0 +1,18 @@
+<!--pages/user/checkHouseholder.wxml-->
+<view class="container">
+  <view class="title">您的身份为户主，更新居住信息需要验证您身份信息，请您补全注册用手机号码及验证码。</view>
+  <view class="inputarea">
+    <text class="inputtitle">手机号码</text>
+    <input class="numinput" bindinput="inputMobileNo" placeholder="请输入注册的手机号码" placeholder-class="phcolor" type="number" maxlength="18" value="{{inputedMobileNo}}"/>
+  </view>
+  <view class="inputarea">
+    <text class="inputtitle">验证码</text>
+    <input class="codeinput" bindinput="inputCode" placeholder="请输入验证码" placeholder-class="phcolor"/>
+    <text wx:if="{{codeSended}}" class="secondbutton" disable="{{true}}">({{seconds}}s)</text>
+    <text wx:else class="codebutton" bindtap="sendCode" disable="{{codeSended}}">{{sendTitle}}</text>
+  </view>
+  <view class="buttons">
+    <button bindtap="doCancel">取消</button>
+    <button bindtap="doSummit">完成</button>
+  </view>
+</view>

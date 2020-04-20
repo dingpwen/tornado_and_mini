@@ -1,0 +1,30 @@
+<!--pages/login/login.wxml-->
+<view class='login_center'>
+    <view class='login_title'>
+      <text>账户登录</text>
+    </view>
+
+    <view class='class_row'>
+      <text class='class_row_text'>手机号码</text>
+      <input class="phoneNum_input" placeholder='请输入手机号码' maxlength='11' type='text' bindblur="chkphone" bindinput='inputPhone' placeholder-class='plholder'> </input>
+    </view>
+
+    <view class='class_row'>
+      <text class='class_row_text' decode='true'>密&nbsp;&nbsp;&nbsp;码</text>
+      <input class='pwd_input' placeholder='请输入密码' maxlength='18'bindinput='inputPwd' placeholder-class='plholder' password='{{pwdInputType}}'></input>
+      <image src="{{pwdInputType ?'../../images/icon_eye_off.png':'../../images/icon_eye_on.png'}}" class='image_pwd_switch' bindtap='showPwd' data-type='{{pwdInputType}}'></image>
+    </view>
+
+    <navigator class='navigator_fgp' hover-class='none' url='../forgetPwd/forgetPwd' >
+      <text class='text_navi'>忘记密码?</text>
+    </navigator>
+
+    <button class="btn-submit" bindtap="login" >登录</button>
+
+    <navigator class='navigator_register' hover-class='none' url='../register/register' >
+      <text class="text_tips">还没账户？</text>
+      <text class='text_navi'>立即注册</text>
+    </navigator>
+
+</view>
+

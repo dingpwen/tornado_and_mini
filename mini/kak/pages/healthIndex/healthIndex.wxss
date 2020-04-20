@@ -1,0 +1,93 @@
+/* pages/healthIndex/healthIndex.wxss */
+.main {
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+}
+.image_view {
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  width: 400rpx;
+  height: 404rpx;
+  margin-top: 54rpx;
+}
+.main_start {
+  position:relative;
+  text-align: center;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  height: 340rpx;
+  margin-top: 70rpx;
+}
+
+.top_area {
+  text-align: center;
+  align-items: center;
+}
+
+.bottom_area {
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.bottom_left_area {
+  text-align: center;
+  align-items: center;
+  width: 50%;
+}
+
+.bottom_right_area {
+  text-align: center;
+  align-items: center;
+  width: 50%;
+}
+
+.main_text {
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.main_bindday_padding {
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  font-size: 28rpx;
+  font-weight:bold;
+}
+
+.main_losssmoke_padding {
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  font-size: 28rpx;
+  font-weight:bold;
+  margin-top: 28rpx;
+}
+
+.main_losstarco_padding {
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  font-size: 28rpx;
+  font-weight:bold;
+}
+
+.main_text_string {
+  font-size: 24rpx;
+  color: #696969;
+}
+
+.main_text_number {
+  font-size: 42rpx;
+  color: #239F9F;
+}

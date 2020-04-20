@@ -1,0 +1,40 @@
+<!--pages/user/edituser.wxml-->
+<view class="container">
+  <image wx:if="{{!hasWeUserInfo}}" class="userinfo-avatar" src="../../images/cig_default_head.png" background-size="cover"></image>
+  <image wx:else class="userinfo-avatar" src="{{weUserInfo.avatarUrl}}" background-size="cover"></image>
+
+  <view class="userinfo">
+    <view class="editarea">
+      <text class="edit-title">姓名</text>
+      <input class="edit-input" bindinput="inputName" placeholder="请输入您的姓名" placeholder-class="phcolor" type="text" value="{{userInfo.name}}"/>
+    </view>
+    <!--view class="editarea">
+      <text class="edit-title">手机号码</text>
+      <input class="edit-input" bindinput="inputMobileNo" placeholder="请输入您的手机号码" placeholder-class="phcolor" type="number" value="{{userInfo.mobileNo}}"/>
+    </view-->
+    <view class="editarea">
+      <text class="edit-title">所在小区</text>
+      <picker bindchange="bindPickerRa" value="{{nhId}}" range="{{ras}}">
+        <view class="picker">{{ras[nhId]}}</view>
+      </picker>
+    </view>
+    <view class="editarea">
+      <text class="edit-title">详细地址</text>
+      <picker bindchange="bindPickerAddress" value="{{addressId}}" range="{{addresses}}">
+        <view class="picker">{{addresses[addressId]}}</view>
+      </picker>
+    </view>
+    <view class="editarea">
+      <text class="edit-title">您的身份</text>
+      <!--input class="edit-input" bindinput="inputIdentity" placeholder="请输入您的身份" placeholder-class="phcolor" type="text" value="{{userInfo.identity}}"/-->
+      <picker bindchange="bindPickerChange" value="{{identity}}" range="{{identities}}">
+        <view class="picker">{{identities[identity]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="buttons">
+    <button bindtap="cancelEdit">取消</button>
+    <button bindtap="doEdit">完成</button>
+  </view>
+</view>

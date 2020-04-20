@@ -1,0 +1,24 @@
+<!--pages/resident/addResident.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <view class="editarea">
+      <text class="edit-title">姓名</text>
+      <input class="edit-input" bindinput="inputName" placeholder="请输入您的姓名" placeholder-class="phcolor" type="text" maxlength="10"/>
+    </view>
+    <view class="editarea">
+      <text class="edit-title">手机号码</text>
+      <input class="edit-input" bindinput="inputNumber" placeholder="请输入您的手机号码" placeholder-class="phcolor" type="number" maxlength="20"/>
+    </view>
+    <view class="editarea">
+      <text class="edit-title">您的身份</text>
+      <picker bindchange="bindPickerChange" value="{{identity}}" range="{{identities}}">
+        <view class="picker">{{identities[identity]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="buttons">
+    <button bindtap="doCancel">取消</button>
+    <button bindtap="doSave" disabled='{{numberIsEmpty}}'>保存</button>
+  </view>
+</view>

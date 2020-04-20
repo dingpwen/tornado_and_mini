@@ -1,0 +1,32 @@
+/* pages/deliver/recycleResult.wxss */
+.icon-part{
+  margin-top: 120rpx;
+  width: 260rpx;
+  height: 260rpx;
+}
+
+.text-part{
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.deliver-part{
+  margin-top: 60rpx;
+  width: 80%;
+  font-size: 25rpx;
+}
+
+button::after{ 
+	border: none; 
+}
+
+button {
+  width:412rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  margin-top: 60rpx;
+  background: #31BFBF;
+  color: white;
+  font-size:25rpx;
+}

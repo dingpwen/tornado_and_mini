@@ -1,0 +1,9 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="container">
+  <view class="feedsection">
+    <textarea class="feadarea" placeholder-class="phcolor" bindinput="feadInput" value="{{initialContent}}" placeholder="请输入你的意见"  auto-focus />
+    <view class="feedbtn">
+      <button bindtap="submitFead" disabled="{{disabled}}">提 交</button>
+    </view>
+  </view>
+</view>

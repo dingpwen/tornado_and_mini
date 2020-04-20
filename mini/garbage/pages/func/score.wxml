@@ -1,0 +1,18 @@
+<!--pages/func/score.wxml-->
+<view class='main'>
+  <view class='result_zone'>
+    <text>{{result}}</text>
+    <text>分</text>
+  </view>
+  <view class='comment_zone'>
+    <text>{{comment}}</text>
+  </view>
+  <view class='button_zone'>
+    <view class='button' bindtap='gotoanalysis'>
+      <text class='button'>查看题目解析</text>
+    </view>
+    <view class='button' bindtap='exit'>
+      <text class='button'>退出答题</text>
+    </view>
+  </view>
+</view>

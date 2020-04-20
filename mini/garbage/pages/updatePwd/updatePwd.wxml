@@ -1,0 +1,33 @@
+<!--pages/updatePwd/updatePwd.wxml-->
+<view class="container">
+  <view class='page_center'>
+    <view class='area_title'>
+      <image class="image-logo" src="../../images/cig_default_head.png" mode="cover"></image>
+      <text class= "text_title">修改密码</text>
+    </view>
+
+    <view class='class_row'>
+      <text class='class_row_text' decode='true'>旧密码</text>
+      <input class='pwd_input' placeholder='请输入旧密码' maxlength='18' value="{{inputOldPwd}}" bindblur='checkPwd' bindinput='onInputOldPwd' placeholder-class='plholder' password='{{oldPwdInputType}}'></input>
+      <image src="{{oldPwdInputType ?'../../images/icon_eye_off.png':'../../images/icon_eye_on.png'}}" class='image_pwd_switch' bindtap='showOldPwd' data-type='{{oldPwdInputType}}'></image>
+    </view>
+
+    <view class='class_row'>
+      <text class='class_row_text' decode='true'>新密码</text>
+      <input class='pwd_input' placeholder='请输入新密码' maxlength='18' value="{{inputNewPwd}}" bindblur='checkPwd' bindinput='onInputNewPwd' placeholder-class='plholder' password='{{newPwdInputType}}'></input>
+      <image src="{{newPwdInputType ?'../../images/icon_eye_off.png':'../../images/icon_eye_on.png'}}" class='image_pwd_switch' bindtap='showNewPwd' data-type='{{newPwdInputType}}'></image>
+    </view>
+
+    <view class='class_row'>
+      <text class='class_row_text' decode='true'>确认密码</text>
+      <input class='pwd_input' placeholder='请再次输入新密码' maxlength='18' value="{{confirmPwd}}" bindinput='onInputNewPwd2' placeholder-class='plholder' password='{{confirmPwdInputType}}'></input>
+      <image src="{{confirmPwdInputType ?'../../images/icon_eye_off.png':'../../images/icon_eye_on.png'}}" class='image_pwd_switch' bindtap='showConfirmPwd' data-type='{{confirmPwdInputType}}'></image>
+    </view>
+
+    <view class="class_button_area">
+      <button class='btn-cancel' bindtap="cancel">取消</button>
+      <button class='btn-submit' bindtap="updatePwd">提交修改</button>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<!--pages/bindingpage/bindingpage.wxml-->
+<!-- <view class='bindpage_main'>
+  <image class='bindpage_image' src='../../images/bind_top.png'></image>
+  <view class='view_intro'>
+    <text class='text_intro'>欢迎使用KAK电子烟，请打开手机蓝牙、定位以及电子烟盒电源完成绑定，绑定及设置过程中，请将电子烟烟杆插入烟盒。</text>
+  </view>
+  
+   <button type="primary"  bindtap="startBind" class='btn_bind'>开始绑定</button>
+</view> -->
+<!-- <view class="container">
+  <view class='inner'>
+    <view class='top'>
+      <view class="image-area">
+        <image class='image' src="../../images/cig_bluetooth.png"/>
+      </view>
+    </view>
+    <text class='text'>欢迎使用KAK电子烟，请打开手机蓝牙、定位以及电子烟盒电源完成绑定，绑定及设置过程中，请将电子烟烟杆插入烟盒。</text>
+  </view>
+  <view class="header_view_show">
+      <text class='button_text' bindtap='bindtap'>开始绑定</text>
+  </view>
+</view> -->
+<view class="container">
+  <view>
+    <swiper class="swiper_box" circular="{{true}}" bindchange="swiperchange">
+      <swiper-item catchtouchmove='catchTouchMove' wx:for="{{banners}}" wx:key="id">
+        <view class='swiper-inner'>
+          <view class='swiper-top'>
+            <view class="swiper-image">
+              <image src="{{item.picUrl}}"/>
+            </view>
+          </view>
+          <text>{{item.info}}</text>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="header_view_show">
+      <text class='button_text' bindtap='startBind'>开始绑定</text>
+  </view>
+</view>

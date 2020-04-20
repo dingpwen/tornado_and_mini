@@ -1,0 +1,16 @@
+<!--pages/updateMobile/checkPwd.wxml-->
+<view class='center'>
+    <view class="text_tips">
+      <text>为验证您的身份，修改手机号码需要您输入登录密码，手机号码修改后，需要重新登录，旧号码失效，旧号码上所有积分会同步到新号码。</text>
+    </view>
+    <view class='class_row'>
+      <text class='class_row_text'>手机号码</text>
+      <input class="phoneNum_input" placeholder='请输入注册手机号码' maxlength='11' type='text' bindblur="chkphone" bindinput='onInputPhone' placeholder-class='plholder'> </input>
+    </view>
+    <view class='class_row'>
+      <text class='class_row_text' decode='true'>密&nbsp;&nbsp;&nbsp;码</text>
+      <input class='pwd_input' placeholder='请输入密码' maxlength='18' value="{{inputPwd}}"bindblur='chkpwd' bindinput='onInputPwd' placeholder-class='plholder' password='{{pwdInputType}}'></input>
+    </view>
+    <button class="btn-submit" bindtap="confirm" >确认</button>
+</view>
+

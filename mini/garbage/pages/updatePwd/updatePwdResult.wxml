@@ -1,0 +1,9 @@
+<!--pages/updatePwd/updatePwdResult.wxml-->
+<view class="center">
+  <icon type='success' size='64' color='#31BFBF'></icon>
+  <view class='area-title'>
+    <text class= "text-title">密码修改成功</text>
+  </view>
+  <text class="text-tips">您的密码修改成功，为确保账号安全，您需要使用新密码重新登录。</text>
+  <button class='btn-submit' bindtap="confirm">重新登录</button>
+</view>

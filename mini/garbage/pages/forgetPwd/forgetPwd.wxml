@@ -1,0 +1,23 @@
+<!--pages/forgetPwd/forgetPwd.wxml-->
+<view class="container">
+  <view class='page_center'>
+    <view class='area_title'>
+      <image class="image-logo" src="../../images/cig_default_head.png" mode="cover"></image>
+      <text class= "text_title">找回密码</text>
+    </view>
+
+    <view class='class_row'>
+      <text class='class_row_text'>手机号码</text>
+      <input class="phoneNum_input" placeholder='请输入手机号码' maxlength='11' type='text' bindblur="onCheckMobile" bindinput='onInputMobile' placeholder-class='plholder'> </input>
+    </view>
+
+    <view class="class_row">
+      <text class='class_row_text'>验证码</text>
+      <input class="code_input" bindinput="onInputCode" placeholder="请输入验证码" maxlength='6' placeholder-class="plholder" type="number" />
+      <text wx:if="{{codeSent}}" class="second_button" disable="{{true}}">已发送({{seconds}}s)</text>
+      <text wx:else class="code_button" bindtap="sendCode" disable="{{codeSent}}">发送验证码</text>
+    </view>
+
+    <button class='btn-submit' bindtap="submitSmsCode" >下一步</button>
+  </view>
+</view>
